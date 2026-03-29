@@ -29,7 +29,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - RGB TOG
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
