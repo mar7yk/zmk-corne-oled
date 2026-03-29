@@ -58,6 +58,11 @@
             bindings = <&soft_off>;
             key-positions = <1 15 29>;
         };
+
+        jkl {
+            bindings = <&kt ENTER>;
+            key-positions = <23 24 25>;
+        };
     };
 
     keymap {
@@ -78,10 +83,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &trans  &kp F7  &kp F8  &kp F9  &kp LG(BACKSPACE)                                &mmv MOVE_UP                     &trans        &kp N7        &kp N8        &kp N9        &kp N0    &trans
-&trans  &trans  &kp F5  &kp F6  &kp F6  &trans                           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PERIOD    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp HOME  &trans
-&trans  &trans  &kp F1  &kp F2  &kp F3  &trans             &kp C_MUTE                    &mmv MOVE_DOWN                   &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp END   &trans
-                        &trans  &trans  &trans                                                                            &trans        &trans        &trans
+&trans  &trans  &kp F7  &kp F8  &kp F9  &kp LG(BACKSPACE)                                &mmv MOVE_UP                     &trans         &kp N7        &kp N8        &kp N9        &kp N0    &trans
+&trans  &trans  &kp F5  &kp F6  &kp F6  &trans                           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PERIOD     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp HOME  &trans
+&trans  &trans  &kp F1  &kp F2  &kp F3  &trans             &kp C_MUTE                    &mmv MOVE_DOWN                   &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp END   &trans
+                        &trans  &trans  &kp SPACE                                                                         &kp BACKSPACE  &trans        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -90,13 +95,22 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR           &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
-&trans  &trans    &trans  &trans    &kp TILDE          &kp GRAVE            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &trans
-&trans  &trans    &trans  &trans    &kp DOUBLE_QUOTES  &kp SQT    &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &trans
-                          &trans    &trans             &trans                                                                &trans     &trans     &trans
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR           &kp PRCNT                            &mmv MOVE_UP                     &kp CARET      &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
+&trans  &trans    &trans  &trans    &kp TILDE          &kp GRAVE            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS      &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &trans
+&trans  &trans    &trans  &trans    &kp DOUBLE_QUOTES  &kp SQT    &trans                    &mmv MOVE_DOWN                   &kp UNDER      &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &trans
+                          &trans    &trans             &kp SPACE                                                             &kp BACKSPACE  &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        test {
+            if-layers = <2 1>;
+            then-layer = <0>;
         };
     };
 };
