@@ -152,3 +152,5 @@ combos:
   k: '&soft_off'
 - p: [23, 24, 25]
   k: {t: '$$mdi:keyboard-return$$', h: toggle}
+- p: [15, 16, 17]
+  k: Ctl+$$mdi:keyboard-space$$
