@@ -110,12 +110,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        test {
-            if-layers = <2 1>;
-            then-layer = <0>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
