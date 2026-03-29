@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - RGB BRI
   - Q
   - W
   - E
@@ -13,8 +13,8 @@ layers:
   - I
   - O
   - P
-  - BT CLR ALL
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - RGB EFF
+  - RGB BRD
   - A
   - S
   - D
@@ -50,7 +50,7 @@ layers:
   - {t: '$$mdi:keyboard-tab$$', h: RIGHT GUI}
   - $$mdi:apple-keyboard-option$$
   NUMBER:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB SPI
   - $$mdi:bluetooth-off$$
   - F7
   - F8
@@ -63,7 +63,7 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB SPD
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - F5
   - F6
