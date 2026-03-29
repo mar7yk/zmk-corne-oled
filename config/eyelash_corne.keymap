@@ -4,6 +4,7 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
@@ -65,10 +66,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E             &kp R             &kp T                               &kp UP                &kp Y            &kp U              &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S  &kp D             &kp F             &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H            &kp J              &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C             &kp V             &kp B        &kp SPACE              &kp DOWN              &kp N            &kp M              &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LEFT_CONTROL  &mt LEFT_GUI TAB  &lt 1 SPACE                                               &lt 2 BACKSPACE  &mt RIGHT_GUI TAB  &kp RALT
+&bt BT_SEL 1  &kp Q  &kp W  &kp E             &kp R             &kp T                               &kp UP                &kp Y            &kp U              &kp I      &kp O    &kp P     &bt BT_CLR_ALL
+&bt BT_SEL 2  &kp A  &kp S  &kp D             &kp F             &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H            &kp J              &kp K      &kp L    &kp SEMI  &rgb_ug RGB_TOG
+&kp LCTRL     &kp Z  &kp X  &kp C             &kp V             &kp B        &kp SPACE              &kp DOWN              &kp N            &kp M              &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                            &kp LEFT_CONTROL  &mt LEFT_GUI TAB  &lt 1 SPACE                                               &lt 2 BACKSPACE  &mt RIGHT_GUI TAB  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
