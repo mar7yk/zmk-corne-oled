@@ -63,6 +63,11 @@
             bindings = <&kt ENTER>;
             key-positions = <23 24 25>;
         };
+
+        sdf {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <15 16 17>;
+        };
     };
 
     keymap {
