@@ -60,7 +60,7 @@
         };
 
         jkl {
-            bindings = <&kt ENTER>;
+            bindings = <&kp ENTER>;
             key-positions = <23 24 25>;
         };
 
