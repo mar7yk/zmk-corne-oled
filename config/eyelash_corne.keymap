@@ -82,7 +82,7 @@
                                        &kp LEFT_CONTROL  &mt LEFT_GUI TAB  &lt 1 SPACE                                                      &lt 2 BACKSPACE  &mt RIGHT_GUI TAB  &kp RALT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         lower_layer {
