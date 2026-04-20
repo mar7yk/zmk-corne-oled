@@ -68,6 +68,11 @@
             bindings = <&kp ENTER>;
             key-positions = <15 16 17>;
         };
+
+        er {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <3 4>;
+        };
     };
 
     keymap {
@@ -88,8 +93,8 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&rgb_ug RGB_SPI  &bt BT_CLR    &kp F7  &kp F8  &kp F9  &kp LG(BACKSPACE)                                &mmv MOVE_UP                     &trans         &kp N7        &kp N8        &kp N9        &kp N0    &trans
-&rgb_ug RGB_SPD  &bt BT_SEL 0  &kp F5  &kp F6  &kp F6  &mkp MB1                         &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PERIOD     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp HOME  &trans
+&rgb_ug RGB_SPI  &bt BT_CLR    &kp F7  &kp F8  &kp F9  &kp LG(BACKSPACE)                                &mmv MOVE_UP                     &trans         &kp N7        &kp N8        &kp N9        &kp N0    &kp C_AC_ZOOM_IN
+&rgb_ug RGB_SPD  &bt BT_SEL 0  &kp F5  &kp F6  &kp F6  &mkp MB1                         &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PERIOD     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp HOME  &kp C_AC_ZOOM_OUT
 &trans           &bt BT_SEL 1  &kp F1  &kp F2  &kp F3  &mkp MB2           &kp C_MUTE                    &mmv MOVE_DOWN                   &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp END   &trans
                                        &trans  &trans  &kp SPACE                                                                         &kp BACKSPACE  &trans        &trans
             >;
