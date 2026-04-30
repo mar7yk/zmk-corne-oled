@@ -99,7 +99,7 @@
                                        &trans  &trans  &kp SPACE                                                                         &kp BACKSPACE  &trans        &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_NEXT C_PREVIOUS>;
         };
 
         raise_layer {
